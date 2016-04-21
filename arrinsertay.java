@@ -14,8 +14,10 @@ public class arrinsertay {
 		int[] newA = new int[a.length + 1];
 		int insertPos = -999999;
 
-		//insertPos = linearSearch(a, insertNum, insertPos);
-		insertPos = binarySearch(a, insertNum, insertPos);
+		insertPos = linearSearch(a, insertNum, insertPos);
+		
+		//doesn't work yet vvvvvv
+		//insertPos = binarySearch(a, insertNum, insertPos);
 		for (int j = 0; j < newA.length; j++) {
 			if (insertPos == 0) {
 				if (j == 0) {
@@ -33,7 +35,7 @@ public class arrinsertay {
 				if (j < insertPos) {
 					newA[j] = a[j];
 				} else if(j > insertPos) {
-					newA[j] = a[j -1];
+					newA[j] = a[j - 1];
 				}	else {
 					newA[j] = insertNum;
 				}
